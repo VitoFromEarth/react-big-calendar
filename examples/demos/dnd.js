@@ -16,8 +16,8 @@ class Dnd extends React.Component {
       events: events,
     }
 
-    this.moveEvent = this.moveEvent.bind(this);
-    this.newEvent = this.newEvent.bind(this);
+    this.moveEvent = this.moveEvent.bind(this)
+    this.newEvent = this.newEvent.bind(this)
   }
 
   moveEvent({ event, start, end }) {
@@ -53,8 +53,8 @@ class Dnd extends React.Component {
   }
 
   newEvent(event) {
-    let idList = this.state.events.map((a) => a.id);
-    let newId = Math.max(...idList) + 1;
+    let idList = this.state.events.map(a => a.id)
+    let newId = Math.max(...idList) + 1
     let hour = {
       id: newId,
       title: 'New Event',
@@ -63,8 +63,8 @@ class Dnd extends React.Component {
       end: event.end,
     }
     this.setState({
-      events: this.state.events.concat([hour])
-    });
+      events: this.state.events.concat([hour]),
+    })
   }
 
   render() {
