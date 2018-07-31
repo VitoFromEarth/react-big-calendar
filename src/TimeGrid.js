@@ -287,7 +287,7 @@ export default class TimeGrid extends Component {
             className="rbc-time-gutter"
           />
           {this.renderEvents(range, rangeEvents, getNow(), resources || [null])}
-          {this.props.renderRight()}
+          {this.props.renderRight && this.props.renderRight()}
           <div ref="timeIndicator" className="rbc-current-time-indicator" />
         </div>
       </div>
